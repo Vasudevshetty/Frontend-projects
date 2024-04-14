@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(180deg, #0f0f0f 50%, #a12a59 50%);
+  background: #333;
   color: #fff;
 }
 
@@ -22,6 +22,7 @@ body {
 }
 
 .wrapper {
+  min-height: 400px;
   width: 400px;
   background: #1f1f1f;
   border-radius: 7px;
@@ -52,6 +53,8 @@ header i {
 
 .wrapper .input-part {
   margin: 20px 25px 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper.active .input-part {
@@ -93,6 +96,7 @@ header i {
 .input-part input {
   text-align: center;
   padding: 0 15px;
+  margin-top: 50px;
   border: 1px solid #333;
 }
 
@@ -136,7 +140,7 @@ header i {
 
 .wrapper .weather-part {
   display: none;
-  margin: 30px 0 0;
+  margin: 10px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
