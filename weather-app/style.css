@@ -23,7 +23,7 @@ body {
 
 .wrapper {
   width: 400px;
-  background-repeat: #1f1f1f;
+  background: #1f1f1f;
   border-radius: 7px;
   border: 1px solid #fff;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
@@ -50,4 +50,86 @@ header i {
   font-size: 30px;
 }
 
+.wrapper .input-part {
+  margin: 20px 25px 30px;
+}
 
+.wrapper.active .input-part {
+  display: none;
+}
+
+.input-part .info-txt {
+  display: none;
+  font-size: 17px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+
+.input-part .info-txt.error {
+  color: #ff5252;
+  display: block;
+  background-color: #1f1f1f;
+  border: 1px solid #ff5252;
+}
+
+.input-part .info-txt.pending {
+  color: #5362b8;
+  display: block;
+  background: #1f1f1f;
+  border: 1px solid #5362b8;
+}
+
+.input-part :where(input, button) {
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+.input-part input {
+  text-align: center;
+  padding: 0 15px;
+  border: 1px solid #333;
+}
+
+.input-part input:is(:focus, :vaild) {
+  border: 2px solid #dbc025;
+}
+
+.input-part input::placeholder {
+  color: #666;
+}
+
+.input-part .separator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background-color: #333;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.separator::before {
+  content: "or";
+  color: #666;
+  font-size: 19px;
+  padding: 0 15px;
+  background: #1f1f1f;
+}
+
+.input-part button {
+  color: #fff;
+  cursor: pointer;
+  background: #5362b8;
+  transition: 0.3s ease;
+}
+
+.input-part button:hover {
+  background: #525d9c;
+}
