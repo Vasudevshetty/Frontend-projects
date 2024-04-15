@@ -124,7 +124,7 @@ input {
   opacity: 0;
 }
 
-.container.right-panel-active .sign-in-container {
+.container.right-panel-active .sign-up-container {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
@@ -219,7 +219,7 @@ input {
 
 .overlay-right {
   right: 0;
-  transform: translateX(20%);
+  transform: translateX(0%);
 }
 
 .container.right-panel-active .overlay-right {
