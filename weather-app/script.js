@@ -54,9 +54,14 @@ const fetchData = async function (api) {
   */
 
   try {
-    const data = await (await fetch(api)).json();
-
-    weatherDetails(data);
+    // const data = await (await fetch(api)).json();
+    const response = await fetch(api);
+    if (response.status == 404) {
+      throw new Error(`${inputField.value} isn't a city name.`);
+    } else {
+      const data = await response.json();
+      weatherDetails(data);
+    }
   } catch (err) {
     infoTxt.textContent = "Something went wrong. API error. " + err.message;
     infoTxt.classList.replace("pending", "error");
@@ -64,10 +69,6 @@ const fetchData = async function (api) {
 };
 
 const weatherDetails = function (data) {
-  if (data.cod == "404") {
-    infoTxt.classList.replace("pending", "error");
-    infoTxt.textContent = `${inputField.value} isn't a city name.`;
-  }
   infoTxt.classList.remove("pending");
 
   const city = data.name;
