@@ -39,9 +39,11 @@ const requestApi = function (city) {
   fetchData(api);
 };
 
-const fetchData = function (api) {
+const fetchData = async function (api) {
   infoTxt.textContent = "Getting weather details";
   infoTxt.classList.add("pending");
+  // lets convert this to async await
+  /*
   fetch(api)
     .then((response) => response.json())
     .then((data) => weatherDetails(data))
@@ -49,6 +51,16 @@ const fetchData = function (api) {
       infoTxt.textContent = "Something went wrong. API error.";
       infoTxt.classList.replace("pending", "error");
     });
+  */
+
+  try {
+    const data = await (await fetch(api)).json();
+
+    weatherDetails(data);
+  } catch (err) {
+    infoTxt.textContent = "Something went wrong. API error. " + err.message;
+    infoTxt.classList.replace("pending", "error");
+  }
 };
 
 const weatherDetails = function (data) {
@@ -57,7 +69,6 @@ const weatherDetails = function (data) {
     infoTxt.textContent = `${inputField.value} isn't a city name.`;
   }
   infoTxt.classList.remove("pending");
-  console.log(data);
 
   const city = data.name;
   const country = data.sys.country;
