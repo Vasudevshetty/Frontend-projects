@@ -216,21 +216,31 @@ exchangeIcon.addEventListener("click", () => {
   getCurrencyExchange();
 });
 
-const getCurrencyExchange = function () {
+const getCurrencyExchange = async function () {
   const amount = document.querySelector("form input").value;
   const exchangeRate = document.querySelector(".exchange-rate");
 
   const url = ` https://v6.exchangerate-api.com/v6/${apiKey}/latest/${dropFrom.value}`;
 
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      let exchange = data.conversion_rates[dropTo.value];
-      let totalAmt = (amount * exchange).toFixed(2);
+  // fetch(url)
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     let exchange = data.conversion_rates[dropTo.value];
+  //     let totalAmt = (amount * exchange).toFixed(2);
 
-      exchangeRate.innerText = `${amount} ${dropFrom.value} = ${totalAmt} ${dropTo.value}`;
-    })
-    .catch(() => (exchangeRate.innerText = "Something went wrong"));
+  //     exchangeRate.innerText = `${amount} ${dropFrom.value} = ${totalAmt} ${dropTo.value}`;
+  //   })
+  //   .catch(() => (exchangeRate.innerText = "Something went wrong"));
+
+  // lets make this work with async await
+  try {
+    const resp = await fetch(url);
+    const data = await resp.json();
+    let exchange = data.conversion_rates[dropTo.value];
+    let totalAmt = (amount * exchange).toFixed(2);
+
+    exchangeRate.innerText = `${amount} ${dropFrom.value} = ${totalAmt} ${dropTo.value}`;
+  } catch (err) {
+    exchangeRate.innerText = `Something went wrong ${err.message}`;
+  }
 };
-
-getCurrencyExchange("USD");
