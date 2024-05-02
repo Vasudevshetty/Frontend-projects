@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+:root {
+  --pear-can: #e6ffde;
+  --pear-logo: #03403f;
+  --apple-can: #f2675a;
+  --apple-logo: #ec4458;
+  --exotic-can: #9590f1;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --exotic-logo: #6464ff;
+  --pear-background: #c9e78a;
+  --apple-background: #ffb2b2;
+  --exotic-background: #c1bff2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden !important;
+}
