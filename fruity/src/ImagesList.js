@@ -1,15 +1,15 @@
 import apple_one from "./Images/apple-one.png";
 import apple_two from "./Images/apple-two.png";
 import apple_three from "./Images/apple-three.png";
-import apple_four from "./Images/apple-three.png";
+import apple_four from "./Images/apple-four.png";
 import pear_one from "./Images/pear-one.png";
 import pear_two from "./Images/pear-two.png";
 import pear_three from "./Images/pear-three.png";
-import pear_four from "./Images/pear-three.png";
+import pear_four from "./Images/pear-four.png";
 import exotic_one from "./Images/exotic-one.png";
 import exotic_two from "./Images/exotic-two.png";
 import exotic_three from "./Images/exotic-three.png";
-import exotic_four from "./Images/exotic-three.png";
+import exotic_four from "./Images/exotic-four.png";
 
 export const fruits = {
   apple: {
