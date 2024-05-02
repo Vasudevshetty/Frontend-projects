@@ -75,7 +75,10 @@ function Images({ fruit }) {
 function Image({ number, fruit }) {
   return (
     <div className={`image-${number} fruit-image`}>
-      <img src={fruits[fruit][number]} alt={fruit + "-image"} />
+      <img
+        src={fruits[fruit][number]}
+        alt={fruit + "-image"}
+      />
     </div>
   );
 }
