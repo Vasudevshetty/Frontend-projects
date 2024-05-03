@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa0ddd56.css",
-    "main.js": "/static/js/main.3d5528aa.js",
-    "static/media/cane.svg": "/static/media/cane.51264a4b8b1c882fa083b30ef7875fce.svg",
-    "static/media/pear-three.png": "/static/media/pear-three.16f723b47894b002429d.png",
-    "static/media/Labels.jpg": "/static/media/Labels.754d9408eb6029558290.jpg",
-    "static/media/pear-one.png": "/static/media/pear-one.d17bc071d051299bc418.png",
-    "static/media/apple-one.png": "/static/media/apple-one.70370d14d6b6795b9d9a.png",
-    "static/media/exotic-one.png": "/static/media/exotic-one.f60d79c0e97ecec2060a.png",
-    "static/media/pear-four.png": "/static/media/pear-four.2af28e6f8189e77eeeb9.png",
-    "static/media/apple-four.png": "/static/media/apple-four.3b2a9abc4d32f97e12de.png",
-    "static/media/exotic-four.png": "/static/media/exotic-four.d0d34ae26dc0837370e9.png",
-    "static/media/exotic-three.png": "/static/media/exotic-three.d0d34ae26dc0837370e9.png",
-    "static/media/exotic-two.png": "/static/media/exotic-two.4a558ed226b140b77f3b.png",
-    "static/media/pear-two.png": "/static/media/pear-two.2723bca000114f4144ef.png",
-    "static/media/apple-two.png": "/static/media/apple-two.a714b35c716a0d0cfb05.png",
-    "static/media/apple-three.png": "/static/media/apple-three.e744cf9cd747d0954f02.png",
-    "index.html": "/index.html",
-    "main.fa0ddd56.css.map": "/static/css/main.fa0ddd56.css.map",
-    "main.3d5528aa.js.map": "/static/js/main.3d5528aa.js.map"
+    "main.css": "./static/css/main.f02bb60d.css",
+    "main.js": "./static/js/main.59b4d16c.js",
+    "static/media/cane.svg": "./static/media/cane.51264a4b8b1c882fa083b30ef7875fce.svg",
+    "static/media/pear-three.png": "./static/media/pear-three.16f723b47894b002429d.png",
+    "static/media/Labels.jpg": "./static/media/Labels.754d9408eb6029558290.jpg",
+    "static/media/pear-one.png": "./static/media/pear-one.d17bc071d051299bc418.png",
+    "static/media/apple-one.png": "./static/media/apple-one.70370d14d6b6795b9d9a.png",
+    "static/media/exotic-one.png": "./static/media/exotic-one.f60d79c0e97ecec2060a.png",
+    "static/media/pear-four.png": "./static/media/pear-four.2af28e6f8189e77eeeb9.png",
+    "static/media/apple-four.png": "./static/media/apple-four.3b2a9abc4d32f97e12de.png",
+    "static/media/exotic-four.png": "./static/media/exotic-four.d0d34ae26dc0837370e9.png",
+    "static/media/exotic-three.png": "./static/media/exotic-three.d0d34ae26dc0837370e9.png",
+    "static/media/exotic-two.png": "./static/media/exotic-two.4a558ed226b140b77f3b.png",
+    "static/media/pear-two.png": "./static/media/pear-two.2723bca000114f4144ef.png",
+    "static/media/apple-two.png": "./static/media/apple-two.a714b35c716a0d0cfb05.png",
+    "static/media/apple-three.png": "./static/media/apple-three.e744cf9cd747d0954f02.png",
+    "index.html": "./index.html",
+    "main.f02bb60d.css.map": "./static/css/main.f02bb60d.css.map",
+    "main.59b4d16c.js.map": "./static/js/main.59b4d16c.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa0ddd56.css",
-    "static/js/main.3d5528aa.js"
+    "static/css/main.f02bb60d.css",
+    "static/js/main.59b4d16c.js"
   ]
 }
