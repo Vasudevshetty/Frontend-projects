@@ -1,19 +1,41 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import cane from "./Images/cane.svg";
 import labels from "./Images/Labels.jpg";
 import { fruits } from "./ImagesList";
+import gsap from "gsap";
 
 export default function App() {
   const [fruit, setFruit] = useState("pear");
   const [text, setText] = useState("pear");
 
+  useEffect(() => {
+    gsap.from(".fruit-image", { y: "0px", delay: 0.5 });
+    gsap.to(".fruit-image img", {
+      x: "random(-20, 20)",
+      y: "random(-20, 20)",
+      zIndex: 22,
+      duration: 2,
+      ease: "none",
+      yoyo: true,
+      repeat: -1,
+    });
+  }, []);
+
   function handlePrev() {
     if (fruit === "exotic") setFruit("apple");
     else if (fruit === "apple") setFruit("pear");
+
+    gsap.from(".fruit-image", { y: "100vh", delay: 0.5 });
+    gsap.to(".logo", { duration: 1 });
+    gsap.from(".h1", { y: "20%", opacity: 0, duration: 0.5 });
   }
   function handleNext() {
     if (fruit === "pear") setFruit("apple");
     else if (fruit === "apple") setFruit("exotic");
+
+    gsap.from(".fruit-image", { y: "-100vh", delay: 0.4, duration: 0.4 });
+    gsap.to(".logo", { opacity: 1, duration: 1 });
+    gsap.from(".h1", { y: "20%", opacity: 0, duration: 0.5 });
   }
 
   useEffect(() => {
