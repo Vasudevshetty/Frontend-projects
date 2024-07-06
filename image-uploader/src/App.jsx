@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { collection, addDoc } from "firebase/firestore";
+import { storage, firestore } from "../firebaseConfig";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [image, setImage] = useState(null);
+  const [imageUrl, setImageUrl] = useState("");
+
+  function handleImageChange(e) {
+    if (e.target.files[0]) setImage(e.target.files[0]);
+  }
+
+  async function handleUpload() {
+    if (!image) return;
+    const storageRef = ref(storage, `images/${image.name}`);
+    try {
+      await uploadBytes(storageRef, image);
+
+      const url = await getDownloadURL(storageRef);
+      setImageUrl(url);
+
+      const docRef = await addDoc(collection(firestore, "images"), {
+        name: image.name,
+        url: url,
+      });
+
+      console.log("Doccument written with id ", docRef.id);
+
+      alert("image uploaded succesffully");
+    } catch (error) {
+      console.error("Error uploading image", error);
+    }
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <h2>Image Uploader</h2>
+      <input type="file" onChange={handleImageChange} />
+      <button onClick={handleUpload}>Image Upload</button>
+      {imageUrl && (
+        <div>
+          <h3>Uploaded iamge:</h3>
+          <img src={imageUrl} alt="Uploaded" style={{ maxWidth: "300px" }} />
+          <a href={imageUrl} download>
+            {" "}
+            Download
+          </a>
+        </div>
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
