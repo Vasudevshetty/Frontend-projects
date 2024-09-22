@@ -5,3 +5,7 @@
 body {
   font-family: "Quicksand", "sans-serif";
 }
+
+*{
+  @apply transition-colors duration-200;
+}
