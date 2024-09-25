@@ -157,41 +157,6 @@ export const events = [
 // ------- ==
 // chart data, later we will use this!!!
 
-// const options = {
-//   series: [44, 55, 41],
-//   options: {
-//     chart: {
-//       type: "donut",
-//       height: 350,
-//     },
-//     labels: ["Desktop", "Tablet", "Mobile"],
-//     colors: ["#FF5733", "#33FF57", "#3357FF"],
-//     legend: {
-//       position: "bottom",
-//       labels: {
-//         colors: darkMode ? "#dddddd" : "#000000",
-//       },
-//     },
-//     dataLabels: {
-//       style: {
-//         colors: ["#dddddd"],
-//       },
-//     },
-//     responsive: [
-//       {
-//         breakpoint: 480,
-//         options: {
-//           chart: {
-//             width: 200,
-//           },
-//           legend: {
-//             position: "bottom",
-//           },
-//         },
-//       },
-//     ],
-//   },
-// };
 
 // ..........
 // const chartConfig = {

@@ -2,8 +2,8 @@ import { useState } from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Content from "./components/Dashboard/Content";
-import Profile from "./components/Dashboard/Profile/Profile";
 import Main from "./components/Dashboard/Main";
+import Profile from "./components/Dashboard/Profile/Profile";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
