@@ -1,6 +1,6 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { shortcutLink } from "../../../constants";
-import Title from "./Title";
+import Title from "../Title";
 
 function Shortcuts() {
   return (
