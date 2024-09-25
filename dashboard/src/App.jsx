@@ -5,6 +5,7 @@ import Content from "./components/Dashboard/Content";
 import Main from "./components/Dashboard/Main";
 import Profile from "./components/Dashboard/Profile/Profile";
 import Stats from "./components/Dashboard/Stats/Stats";
+import Team from "./components/Dashboard/Team/Team";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -22,7 +23,9 @@ function App() {
       <Main>
         <Content>
           <Stats darkMode={darkMode} />
-          <div className="flex flex-col gap-3 lg:flex-row"></div>
+          <div className="flex flex-col gap-3 lg:flex-row">
+            <Team />
+          </div>
         </Content>
         <Profile darkMode={darkMode} />
       </Main>

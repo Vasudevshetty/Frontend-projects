@@ -110,28 +110,28 @@ export const users = [
     name: "Robert Fox",
     country: "USA",
     role: "Python Developer",
-    image: "https://github.com/robert.png",
+    image: "https://randomuser.me/api/portraits/med/men/75.jpg",
     bgColor: "bg-yellow-100",
   },
   {
     name: "Jane Doe",
     country: "UK",
     role: "Frontend Developer",
-    image: "https://github.com/jen.png",
+    image: "https://randomuser.me/api/portraits/med/men/95.jpg",
     bgColor: "bg-blue-100",
   },
   {
     name: "John Smith",
     country: "Canada",
     role: "Backend Developer",
-    image: "https://github.com/john-smith.png",
+    image: "https://randomuser.me/api/portraits/med/men/85.jpg",
     bgColor: "bg-gray-100",
   },
   {
-    name: "Vasudev D M",
-    country: "India",
+    name: "Kate Cross",
+    country: "USA",
     role: "Full Stack Developer",
-    image: "https://github.com/Vasudevshetty.png",
+    image: "https://randomuser.me/api/portraits/med/women/78.jpg",
     bgColor: "bg-slate-100",
   },
 ];
@@ -156,6 +156,5 @@ export const events = [
 
 // ------- ==
 // chart data, later we will use this!!!
-
 
 // ..........
